@@ -16,7 +16,7 @@ public class Main {
         final long START_TIME = System.currentTimeMillis();
 
         sorter.quickSort(numbers);
-        
+
         final double END_TIME = (System.currentTimeMillis() - START_TIME) / 1_000D;
         final String[] TIME = String.valueOf(END_TIME).split("\\.");
 
