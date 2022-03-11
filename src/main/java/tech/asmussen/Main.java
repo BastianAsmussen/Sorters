@@ -16,7 +16,7 @@ public class Main {
 
         final long START_TIME = System.currentTimeMillis();
 
-        sorter.quickSort(numbers);
+        // sorter.quickSort(numbers);
         // sorter.mergeSort(numbers);
         // sorter.insertionSort(numbers);
         // sorter.bubbleSort(numbers);
