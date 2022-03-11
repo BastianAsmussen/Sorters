@@ -19,6 +19,7 @@ public class Main {
         sorter.quickSort(numbers);
         // sorter.mergeSort(numbers);
         // sorter.insertionSort(numbers);
+        // sorter.bubbleSort(numbers);
         // sorter.bogoSort(Arrays.stream(numbers).boxed().collect(Collectors.toList()));
 
         final double END_TIME = (System.currentTimeMillis() - START_TIME) / 1_000D;

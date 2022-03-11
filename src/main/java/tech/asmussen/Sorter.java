@@ -175,6 +175,34 @@ public class Sorter {
 
     // END OF INSERTION SORT
 
+    // START OF BUBBLE SORT
+
+    public void bubbleSort(int[] numbers) {
+
+        boolean hasSwapped;
+
+        do {
+
+            hasSwapped = false;
+
+            for (int i = 0; i < numbers.length - 1; i++) {
+
+                if (numbers[i] > numbers[i + 1]) {
+
+                    hasSwapped = true;
+
+                    int temp = numbers[i];
+
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = temp;
+                }
+            }
+
+        } while (hasSwapped);
+    }
+
+    // END OF BUBBLE SORT
+
     // START OF BOGO SORT
 
     public void bogoSort(List<Integer> numbers) {
