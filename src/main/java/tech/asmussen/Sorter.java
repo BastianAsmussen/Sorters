@@ -1,5 +1,7 @@
 package tech.asmussen;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Sorter {
@@ -172,4 +174,32 @@ public class Sorter {
     }
 
     // END OF INSERTION SORT
+
+    // START OF BOGO SORT
+
+    public void bogoSort(List<Integer> numbers) {
+
+        while (!isBogoSorted(numbers)) {
+
+            Collections.shuffle(numbers);
+        }
+    }
+
+    private static boolean isBogoSorted(List<Integer> numbers) {
+
+        if (numbers == null) return true;
+
+        int length = numbers.size();
+
+        if (length <= 1) return true;
+
+        for (int i = 0; i < length - 1; i++) {
+
+            if (numbers.get(i) > numbers.get(i + 1)) return false;
+        }
+
+        return true;
+    }
+
+    // END OF BOGO SORT
 }
