@@ -1,7 +1,7 @@
 # Sorter
 Different sorting algorithms in Java 17.
 
-**You are welcome to fork this project and add your own alorgithm implementations!**
+### You are welcome to fork this project and add your own alorgithm implementations!
 
 # Usage:
 ```java
