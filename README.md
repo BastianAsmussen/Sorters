@@ -7,7 +7,7 @@ Different sorting algorithms in Java 17.
 ```java
 Sorter sorter = new Sorter();
 
-int[] numbers = sorter.generateNumbers(100); // Generate a random array of integers.
+int[] numbers = sorter.generateNumbers(100); // Generate a random integer array of size n.
 List<Integer> numberList = Arrays.stream(numbers).boxed().collect(Collectors.toList()); // Use the randomly generated array converted to a list to be used in the bogoSort() method.
 
 sorter.quickSort(numbers); // Use the quicksort algorithm to sort your array.
