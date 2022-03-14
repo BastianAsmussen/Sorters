@@ -28,7 +28,7 @@ public class Sorter {
         quickSort(numbers, 0, numbers.length - 1);
     }
 
-    public void quickSort(int[] numbers, int lowIndex, int highIndex) {
+    private void quickSort(int[] numbers, int lowIndex, int highIndex) {
 
         if (lowIndex >= highIndex) return;
 
