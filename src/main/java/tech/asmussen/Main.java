@@ -1,6 +1,8 @@
 package tech.asmussen;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -8,7 +10,8 @@ public class Main {
 
         Sorter sorter = new Sorter();
 
-        int[] numbers = sorter.generateNumbers((args.length > 0) ? Integer.parseInt(args[0]) : 100);
+        int[] numbers = sorter.generateNumbers((args.length > 0) ? Integer.parseInt(args[0]) : 14);
+        List<Integer> numberList = Arrays.stream(numbers).boxed().collect(Collectors.toList());
 
         System.out.println("Before:");
         System.out.println(Arrays.toString(numbers));
@@ -19,7 +22,7 @@ public class Main {
         // sorter.mergeSort(numbers);
         // sorter.insertionSort(numbers);
         // sorter.bubbleSort(numbers);
-        // sorter.bogoSort(numbers);
+        // sorter.bogoSort(numberList);
 
         final double END_TIME = (System.currentTimeMillis() - START_TIME) / 1_000D;
         final String[] TIME = String.valueOf(END_TIME).split("\\.");

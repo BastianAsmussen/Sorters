@@ -1,10 +1,8 @@
 package tech.asmussen;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 public class Sorter {
 
@@ -198,12 +196,7 @@ public class Sorter {
     // END OF BUBBLE SORT
 
     // START OF BOGO SORT
-    public void bogoSort(int[] numbers) {
-
-        bogoSort(Arrays.stream(numbers).boxed().collect(Collectors.toList()));
-    }
-
-    private void bogoSort(List<Integer> numbers) {
+    public void bogoSort(List<Integer> numbers) {
 
         while (!isBogoSorted(numbers)) {
 
