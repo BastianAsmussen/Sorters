@@ -1,7 +1,6 @@
 package tech.asmussen;
 
 import java.util.Arrays;
-// import java.util.stream.Collectors;
 
 public class Main {
 
@@ -20,7 +19,7 @@ public class Main {
         // sorter.mergeSort(numbers);
         // sorter.insertionSort(numbers);
         // sorter.bubbleSort(numbers);
-        // sorter.bogoSort(Arrays.stream(numbers).boxed().collect(Collectors.toList()));
+        // sorter.bogoSort(numbers);
 
         final double END_TIME = (System.currentTimeMillis() - START_TIME) / 1_000D;
         final String[] TIME = String.valueOf(END_TIME).split("\\.");

@@ -1,8 +1,10 @@
 package tech.asmussen;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Sorter {
 
@@ -21,7 +23,6 @@ public class Sorter {
     }
 
     // START OF QUICK SORT
-
     public void quickSort(int[] numbers) {
 
         quickSort(numbers, 0, numbers.length - 1);
@@ -81,11 +82,9 @@ public class Sorter {
         numbers[index1] = numbers[index2];
         numbers[index2] = temp;
     }
-
     // END OF QUICK SORT
 
     // START OF MERGE SORT
-
     public void mergeSort(int[] numbers) {
 
         int length = numbers.length;
@@ -149,11 +148,9 @@ public class Sorter {
             k++;
         }
     }
-
     // END OF MERGE SORT
 
     // START OF INSERTION SORT
-
     public void insertionSort(int[] numbers) {
 
         for (int i = 1; i < numbers.length; i++) {
@@ -172,11 +169,9 @@ public class Sorter {
             numbers[j + 1] = currentValue;
         }
     }
-
     // END OF INSERTION SORT
 
     // START OF BUBBLE SORT
-
     public void bubbleSort(int[] numbers) {
 
         boolean hasSwapped;
@@ -200,12 +195,15 @@ public class Sorter {
 
         } while (hasSwapped);
     }
-
     // END OF BUBBLE SORT
 
     // START OF BOGO SORT
+    public void bogoSort(int[] numbers) {
 
-    public void bogoSort(List<Integer> numbers) {
+        bogoSort(Arrays.stream(numbers).boxed().collect(Collectors.toList()));
+    }
+
+    private void bogoSort(List<Integer> numbers) {
 
         while (!isBogoSorted(numbers)) {
 
@@ -228,6 +226,21 @@ public class Sorter {
 
         return true;
     }
-
     // END OF BOGO SORT
+
+    // START OF GET LARGEST
+    public int getLargest(int[] numbers) {
+
+        int largest = 0;
+
+        for (int i : numbers) {
+
+            if (i <= largest) continue;
+
+            largest = i;
+        }
+
+        return largest;
+    }
+    // END OF GET LARGEST
 }
