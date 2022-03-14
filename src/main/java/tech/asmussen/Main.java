@@ -10,7 +10,7 @@ public class Main {
 
         Sorter sorter = new Sorter();
 
-        int[] numbers = sorter.generateNumbers((args.length > 0) ? Integer.parseInt(args[0]) : 14);
+        int[] numbers = sorter.generateNumbers((args.length > 0) ? Integer.parseInt(args[0]) : 100);
         List<Integer> numberList = Arrays.stream(numbers).boxed().collect(Collectors.toList());
 
         System.out.println("Before:");
