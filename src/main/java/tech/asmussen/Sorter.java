@@ -235,9 +235,7 @@ public class Sorter {
 
         for (int i : numbers) {
 
-            if (i <= largest) continue;
-
-            largest = i;
+            if (i > largest) largest = i;
         }
 
         return largest;
