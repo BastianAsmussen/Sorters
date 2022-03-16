@@ -224,7 +224,7 @@ public class Sorter {
     // START OF GET LARGEST
     public int getLargest(int[] numbers) {
 
-        int largest = 0;
+        int largest = Integer.MIN_VALUE;
 
         for (int i : numbers) {
 
@@ -234,4 +234,18 @@ public class Sorter {
         return largest;
     }
     // END OF GET LARGEST
+
+    // START OF GET SMALLEST
+    public int getSmallest(int[] numbers) {
+
+        int smallest = Integer.MAX_VALUE;
+
+        for (int i : numbers) {
+
+            if (i < smallest) smallest = i;
+        }
+
+        return smallest;
+    }
+    // END OF GET SMALLEST
 }
