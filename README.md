@@ -17,4 +17,6 @@ sorter.bubbleSort(numbers); // Use the bubblesort algorithm to sort your array.
 sorter.bogoSort(numberList); // Use the bogosort algorithm to sort your array.
 
 int largest = sorter.getLargest(numbers); // Use the get largest algorthm to get the largest element in the array.
+int smallest = sorter.getSmallest(numbers); // Use the get smallest algorthm to get the smallest element in the array.
+
 ```
