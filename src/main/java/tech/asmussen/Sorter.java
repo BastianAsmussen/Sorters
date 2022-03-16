@@ -6,20 +6,6 @@ import java.util.Random;
 
 public class Sorter {
 
-    public int[] generateNumbers(int length) {
-
-        Random random = new Random();
-
-        int[] numbers = new int[length];
-
-        for (int i = 0; i < length; i++) {
-
-            numbers[i] = random.nextInt(length);
-        }
-
-        return numbers;
-    }
-
     // START OF QUICK SORT
     public void quickSort(int[] numbers) {
 
