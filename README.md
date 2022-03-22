@@ -7,14 +7,11 @@ Different sorting algorithms in Java 17.
 ```java
 Sorter sorter = new Sorter();
 
-int[] numbers = sorter.generateNumbers(100); // Generate a random integer array of size n.
-List<Integer> numberList = Arrays.stream(numbers).boxed().collect(Collectors.toList()); // Use the randomly generated array converted to a list to be used in the bogoSort() method.
-
-sorter.quickSort(numbers); // Use the quicksort algorithm to sort your array.
-sorter.mergeSort(numbers); // Use the mergesort algorithm to sort your array.
-sorter.insertionSort(numbers); // Use the insertionsort algorithm to sort your array.
-sorter.bubbleSort(numbers); // Use the bubblesort algorithm to sort your array.
-sorter.bogoSort(numberList); // Use the bogosort algorithm to sort your array.
+sorter.quickSort(yourArray); // Use the quicksort algorithm to sort your array.
+sorter.mergeSort(yourArray); // Use the mergesort algorithm to sort your array.
+sorter.insertionSort(yourArray); // Use the insertionsort algorithm to sort your array.
+sorter.bubbleSort(yourArray); // Use the bubblesort algorithm to sort your array.
+sorter.bogoSort(Arrays.stream(numbers).boxed().collect(Collectors.toList())); // Use the bogosort algorithm to sort your array.
 
 int largest = sorter.getLargest(numbers); // Use the get largest algorthm to get the largest element in the array.
 ```
