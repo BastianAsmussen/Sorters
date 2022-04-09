@@ -1,5 +1,6 @@
 package tech.asmussen;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -207,31 +208,38 @@ public class Sorter {
     }
     // END OF BOGO SORT
 
+    // START OF BINARY SEARCH
+    public int binarySearch(int[] numbers, int target) {
+
+        return Arrays.binarySearch(numbers, target);
+    }
+    // END OF BINARY SEARCH
+
     // START OF GET LARGEST
     public int getLargest(int[] numbers) {
 
-        int largest = Integer.MIN_VALUE;
-
-        for (int i : numbers) {
-
-            if (i > largest) largest = i;
-        }
-
-        return largest;
+        return Arrays.stream(numbers).max().isPresent() ? Arrays.stream(numbers).max().getAsInt() : 0;
     }
     // END OF GET LARGEST
 
     // START OF GET SMALLEST
     public int getSmallest(int[] numbers) {
 
-        int smallest = Integer.MAX_VALUE;
-
-        for (int i : numbers) {
-
-            if (i < smallest) smallest = i;
-        }
-
-        return smallest;
+        return Arrays.stream(numbers).min().isPresent() ? Arrays.stream(numbers).min().getAsInt() : 0;
     }
     // END OF GET SMALLEST
+
+    // START OF GET MEDIAN
+    public int getMedian(int[] numbers) {
+
+        return Arrays.stream(numbers).sorted().skip(numbers.length / 2).findFirst().isPresent() ? Arrays.stream(numbers).sorted().skip(numbers.length / 2).findFirst().getAsInt() : 0;
+    }
+    // END OF GET MEDIAN
+
+    // START OF GET AVERAGE
+    public double getAverage(int[] numbers) {
+
+        return Arrays.stream(numbers).average().isPresent() ? Arrays.stream(numbers).average().getAsDouble() : 0;
+    }
+    // END OF GET AVERAGE
 }
